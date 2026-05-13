@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SynDev CM — Le Collectif des Développeurs du Cameroun
 
-## Getting Started
+Une plateforme web moderne et premium dédiée à la valorisation, la structuration et la protection des développeurs au Cameroun et en Afrique.
 
-First, run the development server:
+![SynDev CM Preview](https://github.com/user-attachments/assets/...) <!-- Replace with actual screenshot later -->
+
+## 🚀 Vision
+
+SynDev CM n'est pas seulement un site web, c'est l'épicentre d'un mouvement technologique panafricain. Nous offrons aux développeurs les outils (contrats, tarifs, charte) et le réseau nécessaires pour transformer l'écosystème numérique local.
+
+## 🛠 Stack Technique
+
+- **Framework** : Next.js 15 (App Router)
+- **Langage** : TypeScript
+- **Styling** : Tailwind CSS v4 (CSS-first approach)
+- **Animations** : Framer Motion
+- **Composants** : Radix UI / Lucide Icons
+- **Design System** : Custom Premium Dark Mode (Rouge profond & Noir)
+- **State Management** : Zustand (prêt pour intégration)
+
+## 📁 Architecture du Projet
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+frontend/
+├── src/
+│   ├── app/              # Routes & Pages (Next.js App Router)
+│   ├── components/       # UI, Layout, Sections, Shared components
+│   ├── data/             # Dummy data réalistes (blog, contrats, tarifs)
+│   ├── lib/              # Utilitaires (CN, API clients)
+│   ├── providers/        # Providers (Theme, Query)
+│   └── types/            # Définitions TypeScript
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Fonctionnalités Clés
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Landing Page Impactante** : Hero section animée, chiffres clés, et sections de réassurance.
+- **Charte du Développeur** : Documentation interactive avec navigation sticky.
+- **Bibliothèque de Contrats** : Modèles téléchargeables avec filtres par catégorie.
+- **Guide des Tarifs** : Visualisation dynamique des TJM et salaires mensuels recommandés.
+- **Signalement d'Abus** : Formulaire sécurisé avec option d'anonymat.
+- **Annuaire Communautaire** : Directory des talents avec stacks techniques et badges.
+- **Blog & News** : Espace éducatif pour les bonnes pratiques et actualités.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠 Installation Locale
 
-## Learn More
+1. Cloner le repository :
+   ```bash
+   git clone <repo-url>
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Installer les dépendances :
+   ```bash
+   cd frontend
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Lancer le serveur de développement :
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Ouvrir [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
-## Deploy on Vercel
+## 🤝 Contribution
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Ce projet est construit par et pour le collectif. Les contributions sont les bienvenues via Pull Requests.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+**Construit avec ❤️ pour la Tech Africaine.**

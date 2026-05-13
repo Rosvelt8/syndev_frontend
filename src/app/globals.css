@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  
+  --color-primary: #B91C1C;
+  --color-primary-foreground: #FFFFFF;
+  
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--foreground);
+  
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  
+  --color-accent: #F59E0B;
+  --color-accent-foreground: #000000;
+  
+  --color-card: var(--card);
+  --color-card-foreground: var(--foreground);
+  
+  --color-border: var(--border);
+  --color-input: var(--border);
+  --color-ring: #B91C1C;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --radius-lg: 0.75rem;
+  --radius-md: calc(0.75rem - 2px);
+  --radius-sm: calc(0.75rem - 4px);
+
+  --font-sans: "Inter", "system-ui", "sans-serif";
+  --font-mono: "JetBrains Mono", "monospace";
+
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 5px #B91C1C, 0 0 10px #B91C1C;
+    }
+    to {
+      box-shadow: 0 0 10px #B91C1C, 0 0 20px #B91C1C;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+  --background: #F8FAFC;
+  --foreground: #0F172A;
+  --secondary: #E2E8F0;
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  --card: #FFFFFF;
+  --border: #E2E8F0;
+}
+
+.dark {
+  --background: #080B10;
+  --foreground: #F8FAFC;
+  --secondary: #000000;
+  --muted: #1E293B;
+  --muted-foreground: #94A3B8;
+  --card: #0D1117;
+  --border: #1E293B;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.glass {
+  background: rgba(var(--card-rgb), 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(var(--foreground-rgb), 0.1);
+}
+
+.red-glow {
+  text-shadow: 0 0 10px rgba(185, 28, 28, 0.5);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #B91C1C 0%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
